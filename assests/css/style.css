@@ -37,7 +37,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
 }
 
 .nav-links {
