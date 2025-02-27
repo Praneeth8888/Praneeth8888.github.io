@@ -1,4 +1,5 @@
 let users = [];
+
 function showLogin() {
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
@@ -7,10 +8,14 @@ function showLogin() {
 }
 
 function displayUsers(data) {
-  let str = "<select>";
-  data.map((value) => {
-    str += `<option value=${value.id}>${value.name}</option>`;
+  let str = "<select class='form-select'>";
+  data.forEach((user) => {
+    str += `<option value="${user.id}">${user.name}</option>`;
   });
-  str += "</select>"
-  root.innerHTML = str
+  str += "</select>";
+  document.getElementById("root").innerHTML = str;
+}
+
+function login() {
+  alert("Login functionality to be implemented!");
 }
